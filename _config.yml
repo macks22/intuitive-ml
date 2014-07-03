@@ -1,1 +1,11 @@
+markdown: kramdown
+author: "Mack Sweeney"
+excerpt_separator: <!--more-->
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+      author: "Mack Sweeney"

@@ -1,10 +1,87 @@
-<html>
-  <head>
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/foundation.css">
-  </head>
-  <body>
-    {{ content }}
-  </body>
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+
+  <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/foundation.css">
+
+  <!-- If you are using the gem version, you need this only -->
+  <!-- <link rel="stylesheet" href="css/app.css"> -->
+
+  <script src="/js/vendor/modernizr.js"></script>
+
+</head>
+
+<body>
+
+   <div class="row">
+    <div class="large-12 columns">
+      <div class="nav-bar right">
+       <ul class="button-group">
+         <li><a href="https://github.com/macks22" class="button">Github</a></li>
+         <li><a href="http://www.linkedin.com/pub/mackenzie-sweeney/67/a65/398" class="button">LinkedIn</a></li>
+        </ul>
+      </div>
+      <h2>Pursuit of Data Science Mastery</h2>
+      <hr/>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="large-9 columns" role="content">
+      {{ content }}
+    </div>
+
+    <aside class="large-3 columns">
+
+      <h5>Categories</h5>
+      <ul class="side-nav">
+        <li><a href="#">News</a></li>
+        <li><a href="#">Code</a></li>
+        <li><a href="#">Design</a></li>
+        <li><a href="#">Fun</a></li>
+        <li><a href="#">Meerkats</a></li>
+      </ul>
+
+      <div class="panel">
+        <h5>Featured</h5>
+        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+        <a href="#">Read More →</a>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright Mack Daddy Jenkins.</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+             <li><a href="https://github.com/macks22" class="button">Github</a></li>
+             <li><a href="http://www.linkedin.com/pub/mackenzie-sweeney/67/a65/398" class="button">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/vendor/jquery.js"></script>
+  <script src="/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+
 </html>
