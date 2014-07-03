@@ -24,6 +24,7 @@
     <div class="large-12 columns">
       <div class="nav-bar right">
        <ul class="button-group">
+         <li><a href="/" class="button">Home</a></li>
          <li><a href="https://github.com/macks22" class="button">Github</a></li>
          <li><a href="http://www.linkedin.com/pub/mackenzie-sweeney/67/a65/398" class="button">LinkedIn</a></li>
         </ul>
@@ -51,9 +52,11 @@
       </ul>
 
       <div class="panel">
-        <h5>Featured</h5>
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-        <a href="#">Read More →</a>
+        <h4><strong>Recent</strong></h4>
+        {% assign post = site.posts.first %}
+        <h6>{{ post.title }}</h6>
+        {{ post.excerpt }}
+        <a href="{{ post.url }}">Read More →</a>
       </div>
 
     </aside>
@@ -69,6 +72,7 @@
         </div>
         <div class="large-6 columns">
           <ul class="inline-list right">
+             <li><a href="/" class="button">Home</a></li>
              <li><a href="https://github.com/macks22" class="button">Github</a></li>
              <li><a href="http://www.linkedin.com/pub/mackenzie-sweeney/67/a65/398" class="button">LinkedIn</a></li>
           </ul>
