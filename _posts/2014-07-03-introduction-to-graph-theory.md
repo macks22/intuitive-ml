@@ -31,8 +31,8 @@ material with a student who was mostly unfamiliar with graph theory.
     * difference (/): create new set with elements of 1st minus common elements
       of 2nd
 5.  disjoint: contain no common elements
-6.  subset ($$\subset$$): contains some or all of the same elements as the superset
-7.  proper subset ($$\subseteq$$): contains some but not all of the same
+6.  subset ($$\subseteq$$): contains some or all of the same elements as the superset
+7.  proper subset ($$\subset$$): contains some but not all of the same
     elements as the superset
 8.  empty set ($$\emptyset$$): contains no elements, represented by 0 symbol
 9.  cardinality ($$\left\vert{S}\right\vert$$): size of the set; # elements in $$S$$
