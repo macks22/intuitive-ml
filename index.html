@@ -3,7 +3,7 @@ layout: default
 title: Mack Sweeney
 ---
 
-    <div class="large-9 columns" role="content">
+    <div class="large-11 columns" role="content">
 
       {% for post in site.posts %}
         <article>
@@ -11,7 +11,9 @@ title: Mack Sweeney
           <h6>Written by <a href="#">{{ site.author }}</a> on {{ post.date | date_to_string }}.</h6>
 
           <div class="row">
-            {{ post.excerpt }}
+            <div class="columns">
+              {{ post.excerpt }}
+            </div>
           </div>
 
         </article>
