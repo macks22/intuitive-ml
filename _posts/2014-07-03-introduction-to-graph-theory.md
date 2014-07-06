@@ -54,7 +54,7 @@ material with a student who was mostly unfamiliar with graph theory.
 8.  **antiparallel edges** in directed graphs
     * there is an edge from u to v and an edge from v to u
 9.  bipartite: graph whose vertices $$V$$ can be divided into 2 disjoint sets,
-    $$U = V - S$$ and $$S = (U, S)$$ such that every edge connects a vertex in $$U$$ to a
+    $$S$$ and $U = V - S$$, such that every edge connects a vertex in $$U$$ to a
     vertex in $$S$$.
     * using set notation: $$\forall (u, s) \in E, u \in U, s \in S$$
 
