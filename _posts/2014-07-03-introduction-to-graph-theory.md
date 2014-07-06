@@ -20,35 +20,38 @@ material with a student who was mostly unfamiliar with graph theory.
 
 ### Set Theory Primer:
 
-1.  set: collection of unique elements/members
-2.  $$x \in S$$: x "is an element of set S"
-3.  $$x \notin S$$: x "is not an element of set S"
+1.  **set**: collection of unique elements/members
+2.  $$x \in S$$: x "is an element of" set S
+3.  $$x \notin S$$: x "is not an element of" set S
 4.  Operations
-    * intersection ($$\cap$$): create new set containing common elements of two
+    * **intersection** ($$\cap$$): create new set containing common elements of two
       other sets
-    * union ($$\cup$$): create new set containing all [unique] elements from two
+    * **union** ($$\cup$$): create new set containing all [unique] elements from two
       other sets
-    * difference (/): create new set with elements of 1st minus common elements
+    * **difference** (/): create new set with elements of 1st minus common elements
       of 2nd
-5.  disjoint: contain no common elements
-6.  subset ($$\subseteq$$): contains some or all of the same elements as the superset
-7.  proper subset ($$\subset$$): contains some but not all of the same
-    elements as the superset
-8.  empty set ($$\emptyset$$): contains no elements, represented by 0 symbol
-9.  cardinality ($$\left\vert{S}\right\vert$$): size of the set; # elements in $$S$$
-10. cartesian product (A X B): the set of all ordered pairs $$(a, b)$$ such that
-    $$a \in A$$ and $$b \in B$$.
+5.  **disjoint**: two sets that contain no common elements are disjoint
+    * $$A$$ and $$B$$ are disjoint iff $$\forall a \in A \rightarrow a \notin B, b \in B
+      \rightarrow b \notin A$$
+6.  **subset** ($$\subseteq$$): contains some or all of the same elements as the superset
+7.  **proper subset** ($$\subset$$): contains some but not all of the same elements as
+    the superset
+8.  **superset**: contains all elements of the subset (subsumes it)
+9.  **empty set** ($$\emptyset$$): contains no elements, represented by $$\emptyset$$ symbol
+10. **cardinality** ($$\left\vert{S}\right\vert$$): size of the set; # elements in $$S$$
+11. **cartesian product** ($$A \times B$$): the set of all ordered pairs $$(a, b)$$ such
+    that $$a \in A$$ and $$b \in B$$.
 
 ### Graph Terminology:
 
-1.  vertex $$v \in V$$ (you'll find me referring to these as nodes quite often)
-2.  edge $$(u, v) \in E$$
-3.  directed vs. undirected (each edge has a direction)
-4.  weighted vs. unweighted
-5.  bipartite graph
-6.  source and sink (desination)
-7.  in-degree and out-degree in directed graphs
-8.  antiparallel in directed graphs
+1.  $$v \in V$$ is **vertex** v (aka node v)
+2.  $$(u, v) \in E$$ is the **edge** from vertex u to vertex v
+3.  **directed** vs. **undirected** (each edge has a direction)
+4.  **weighted** vs. **unweighted** edges
+5.  **bipartite** graph
+6.  **source** and **sink** (destination)
+7.  **in-degree** and **out-degree** in directed graphs
+8.  **antiparallel edges** in directed graphs
     * there is an edge from u to v and an edge from v to u
 9.  bipartite: graph whose vertices $$V$$ can be divided into 2 disjoint sets,
     $$U = V - S$$ and $$S = (U, S)$$ such that every edge connects a vertex in $$U$$ to a
@@ -57,18 +60,17 @@ material with a student who was mostly unfamiliar with graph theory.
 
 ### Graph Representations:
 
-1.  adjacency list: good when $$\left\vert{E}\right\vert$$ much less than
-    $$\left\vert{V}\right\vert^2$$
+1.  **adjacency list**: good when $$\left\vert{E}\right\vert$$ much less than
+    $$\left\vert{V}\right\vert^2$$ (**sparse**)
      * undirected: size = $$2\left\vert{E}\right\vert$$ because each edge results in
        two entries
      * directed: size = $$\left\vert{E}\right\vert, (u,v) \in E$$ represented by v
        in Adj[u] but not u in Adj[v]
         - u has edge to v but v does not have edge to u
-2.  adjacency matrix: good for when $$\left\vert{E}\right\vert$$ is close to
-    $$\left\vert{V}\right\vert^2$$
-    * in other words, its good for dense graphs
+2.  **adjacency matrix**: good for when $$\left\vert{E}\right\vert$$ is close to
+    $$\left\vert{V}\right\vert^2$$ (**dense**)
 
-Typically stick with adj list because most graphs are sparse, rather than dense.
+Typically stick with adjacency lists because most graphs are sparse, rather than dense.
 
 ### Breadth-first Search (BFS):
 
