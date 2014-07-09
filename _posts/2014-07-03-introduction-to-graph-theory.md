@@ -9,7 +9,35 @@ concepts of graph theory. It is organized into three sections, which currently
 correspond to the number of 2-hour lectures it took me to thoroughly cover this
 material with a student who was mostly unfamiliar with graph theory.
 
+
 <!--more-->
+
+
+## Table of Contents
+
+1.  Part 1
+    1.  Set Theory Primer
+    2.  Graph Terminology
+    3.  Graph Representations
+    4.  Breadth-first Search (BFS)
+        1.  Time Complexity
+        2.  Applications
+2.  Part 2
+    1.  Depth-first Search
+        1.  Time Complexity
+        2.  Applications
+    2.  Connected Components
+    3.  Topological Sort
+        1.  Time Complexity
+        2.  Applications
+    4.  Dijkstra's Algorithm
+3.  Part 3
+    1.  Flow Networks Terminology
+    2.  Ford Fulkerson Method
+        1.  Terminology
+        2.  Algorithm Summary
+        3.  Time Complexity
+        4.  Applications: General problem types
 
 ## Part 1
 
@@ -18,7 +46,7 @@ material with a student who was mostly unfamiliar with graph theory.
 3. Graph Representations
 4. Breadth-first Search
 
-### Set Theory Primer:
+### Set Theory Primer
 
 1.  **set**: collection of unique elements/members
 2.  $$x \in S$$: x "is an element of" set S
@@ -42,7 +70,7 @@ material with a student who was mostly unfamiliar with graph theory.
 11. **cartesian product** ($$A \times B$$): the set of all ordered pairs $$(a, b)$$ such
     that $$a \in A$$ and $$b \in B$$.
 
-### Graph Terminology:
+### Graph Terminology
 
 1.  $$v \in V$$ is **vertex** v (aka node v)
 2.  $$(u, v) \in E$$ is the **edge** from vertex u to vertex v
@@ -58,7 +86,7 @@ material with a student who was mostly unfamiliar with graph theory.
     vertex in $$S$$.
     * using set notation: $$\forall (u, s) \in E, u \in U, s \in S$$
 
-### Graph Representations:
+### Graph Representations
 
 1.  **adjacency list**: good when $$\left\vert{E}\right\vert$$ much less than
     $$\left\vert{V}\right\vert^2$$ (**sparse**)
@@ -72,7 +100,7 @@ material with a student who was mostly unfamiliar with graph theory.
 
 Typically stick with adjacency lists because most graphs are sparse, rather than dense.
 
-### Breadth-first Search (BFS):
+### Breadth-first Search (BFS)
 
 1.  concept of discovery represented by colors:
     * white = undiscovered
@@ -97,7 +125,7 @@ Typically stick with adjacency lists because most graphs are sparse, rather than
     * each new node discovered is queued
     * this continues until the Q is finally empty
 
-#### Time Complexity:
+#### Time Complexity
 
 1.  queue/deqeueu is $$O(1)$$, and happen once for every vertex, which gives a total
     of $$2\left\vert{V}\right\vert = O(V)$$
@@ -108,7 +136,7 @@ Typically stick with adjacency lists because most graphs are sparse, rather than
 
 $$-> O(V) + O(V) + O(E) = O(V + E)$$
 
-#### Applications:
+#### Applications
 
 1. shortest path from a source s to a destination v
 2. connected components
@@ -121,7 +149,7 @@ $$-> O(V) + O(V) + O(E) = O(V + E)$$
 3. Connected componenents
 4. Dijkstra's algorithm
 
-### Depth-first Search:
+### Depth-first Search
 
 1.  same idea of colors to indicate discovery state
     * white = undiscovered
@@ -145,7 +173,7 @@ $$-> O(V) + O(V) + O(E) = O(V + E)$$
        black, finish time set to time + 1, and execution returns to next level
        up
 
-#### Time Complexity:
+#### Time Complexity
 
 1. Initialization: once for every vertex = $$O(V)$$
 2. Distinct set of operations for every vertex = $$O(V)$$
@@ -153,13 +181,13 @@ $$-> O(V) + O(V) + O(E) = O(V + E)$$
 
 $$-> O(V + E)$$
 
-#### Applications:
+#### Applications
 
 1. Solving mazes
 2. Topological sort
 3. Connected components, strongly connected, cycles, bridges
 
-### Connected Components:
+### Connected Components
 
 1.  path = set of edges connecting two vertices
 2.  connected component = subgraph in which any two vertices are connected by a path
@@ -169,7 +197,7 @@ $$-> O(V + E)$$
 5.  bridge = an edge whose deletion increases the number of connected components
     * a bridge connects 2 connected components; removing distinguishes them
 
-### Topological Sort:
+### Topological Sort
 
 1.  DAG = directed acyclic graph (directed and no cycles)
     * often used to indicate precedences among events
@@ -178,18 +206,18 @@ $$-> O(V + E)$$
     * add in step: when finished, insert onto front of linked list
     * afterwards, return the linked list.
 
-#### Time Complexity:
+#### Time Complexity
 
 1. Same as DFS, since we have only one additional operation for each vertex.
 
 $$-> O(V + E)$$
 
-#### Applications:
+#### Applications
 
 1.  critical path
 2.  valid ordering of events (dependency graph)
 
-### Dijkstra's Algorithm:
+### Dijkstra's Algorithm
 
 1.  Problem description: find the single-source shortest path on a weighted,
     directed graph for the case in which all edge weights are nonnegative
@@ -213,7 +241,7 @@ $$-> O(V + E)$$
 5. Transforming Graphs into Flow Networks
 6. Max Bipartite Matching
 
-### Flow Networks Terminology:
+### Flow Networks Terminology
 
 Directed graph in which each edge has a nonnegative capacity $$c(u,v) \geq 0$$
 
@@ -234,7 +262,7 @@ Directed graph in which each edge has a nonnegative capacity $$c(u,v) \geq 0$$
     * $$\left\vert{f}\right\vert = \sum\nolimits_{} f(s,t) - f(t,s)$$ for all flows
 8.  all edges not shown are assumed to have capacity of 0 for ease of reasoning
 
-### Ford Fulkerson Method:
+### Ford Fulkerson Method
 
 Goal: find the max flow ($$f^*$$)
 
@@ -271,7 +299,7 @@ localized flows to increase the global flow
 4.  Update flow values for all edges in that path
 5.  Repeat until no augmenting paths can be found
 
-#### Time Complexity:
+#### Time Complexity
 
 1.  While loop repeats no more than $$\left\vert{f^*}\right\vert$$ times (increase
     at least 1 each time)
@@ -282,7 +310,7 @@ localized flows to increase the global flow
 
 $$-> O(VE^2)$$
 
-#### Applications: General problem types:
+#### Applications: General problem types
 
 1.  multi-source multi-sink max flow problem
 2.  max cardinality bipartite matching
@@ -290,7 +318,7 @@ $$-> O(VE^2)$$
 4.  max edge-disjoint path
 
 
-### Max-flow Min-cut Theorem:
+### Max-flow Min-cut Theorem
 
 In a flow network, the following are equivalent:
 
@@ -298,7 +326,7 @@ In a flow network, the following are equivalent:
 2. residual network Gf contains no augmenting paths
 3. $$\left\vert{f}\right\vert = c(S,T)$$ for some $$cut(S,T)$$ in $$G$$
 
-### Transforming Graphs into Flow Networks:
+### Transforming Graphs into Flow Networks
 
 It is often necessary to alter the graph structure to meet the constraints of a
 flow network. This is useful when the alterations are simple.
@@ -311,7 +339,7 @@ flow network. This is useful when the alterations are simple.
     * new edge from all existing sinks to supersink
     * all new edges given infinite capacity (should not limit current env)
 
-### Max Bipartite Matching:
+### Max Bipartite Matching
 
 Find maximum number of matchings in a bipartite graph: network flow!
 
