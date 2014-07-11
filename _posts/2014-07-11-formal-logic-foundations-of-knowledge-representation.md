@@ -15,9 +15,11 @@ representation comes into play. How does one present knowledge in such a way
 that a computer can understand it? This post discusses knowledge representation
 and reasoning (KRR) in some detail.
 
+
 <!--more-->
 
-## Table of Contents<a name="table-of-contents"></a>
+
+## Table of Contents
 
 1.  [History](#history)
 2.  [The Predicate Calculus](#the-predicate-calculus)
@@ -38,7 +40,7 @@ and reasoning (KRR) in some detail.
             1.  [First-Order Predicate Calculus (FOPC)](#first-order-predicate-calculus-(fopc))
         1.  [Modal Logic](#modal-logic)
 
-## History<a name="history"></a>
+## History
 
 *   1963: Newell & Simon publish their paper on the GPS.
 *   1960s: Most of AI concerned with search techniques and theorem proving.
@@ -51,7 +53,7 @@ and reasoning (KRR) in some detail.
     becomes one of balance: find a language which is both efficient in the
     average case and expressive enough to represent most problems.
 
-## The Predicate Calculus<a name="the-predicate-calculus"></a>
+## The Predicate Calculus
 
 Predicate calculus is the formal language used for knowledge representation. It
 is based on formal logic and propositional calculus, and can be divided into
@@ -60,7 +62,7 @@ theory and concepts of modal logic. Some prominent languages which allow logic
 programming using predicate logic as a foundation are Prolog and CycL (encodes
 the Cyc KB).
 
-### Formal Logic<a name="formal-logic"></a>
+### Formal Logic
 
 A discipline in which _propositions_ are used in _deductive_ arguments to prove
 further propositions. Formal logic is considered an _a priori_ (rather than
@@ -85,7 +87,7 @@ the art of persuasion.
     * derives from the latin _a priori_, meaning "from what is before"
     * in contrast to _a posteriori_, meaning "from what is after"
 
-#### A Deductive Argument<a name="a-deductive-argument"></a>
+#### A Deductive Argument
 
 A _valid_ deductive argument uses a chain of _inference_ to conclude true
 propositions. A _sound_ deductive argument is both valid and starts from _true_
@@ -113,7 +115,7 @@ premises.
     inductive argument is one which reasons about particular facts to propose
     more general conclusions; this is the method used to formulate theories.
 
-#### Deductive Inference<a name="deductive-inference"></a>
+#### Deductive Inference
 
 Deductive inference employs propositional forms to derive conclusions from
 premises. Since all inference forms can be expressed as propositional forms,
@@ -138,7 +140,7 @@ formal logic can accurately be regarded as the study of propositional forms.
     accurately expresses the inference form. In this way, the class of
     propositional forms subsume the class of inference forms.
 
-### The Propositional Calculus (PC)<a name="the-propositional-calculus-(pc)"></a>
+### The Propositional Calculus (PC)
 
 The simplest and most basic branch of logic. It deals only with complete,
 unanalyzed propositions and certain combinations into which they can enter.
@@ -154,7 +156,7 @@ In other words, it deals with _formulas_ rather than _sentences_.
     *   take a wff and uniformly substitue values for its variables and you
         get a sentence, which may be either true or false
 
-#### Propositional Connectives (Operators)<a name="propositional-connectives-(operators)"></a>
+#### Propositional Connectives (Operators)
 
 _Connective propositions_ can be built up by connecting other propositions
 using one or more _connectives_.
@@ -199,7 +201,7 @@ using one or more _connectives_.
     *   In other words, the set of interpretations that make all members of $$B$$ true is
         a subset of the interpretations that make $$A$$ true
 
-#### Formation Rules of PC<a name="formation-rules-of-pc"></a>
+#### Formation Rules of PC
 
 Formation rules specify which sequences of symbols count as acceptable, aka
 well-formed formulas (wff).
@@ -220,12 +222,12 @@ where they are not necessary to disambiguate propositions.
 *   $$p \land (q \longrightarrow r) \land \neg{r}$$ instead of $$[p \land (q
     \longrightarrow r)] \land \neg{r}$$
 
-#### Valid Formulas and Deductive Rules of PC<a name="valid-formulas-and-deductive-rules-of-pc"></a>
+#### Valid Formulas and Deductive Rules of PC
 
 See [relevant Wikipedia
 section](http://en.wikipedia.org/wiki/Propositional_calculus#Basic_and_derived_argument_forms)
 
-#### Axiomatization of PC<a name="axiomatization-of-pc"></a>
+#### Axiomatization of PC
 
 A particular _axiomatic system_ is specified by its _axiomatic basis_. A certain
 set of wffs are chosen to _axioms_, _transformation rules_ are specified for
@@ -247,7 +249,7 @@ deriving further wffs, known as _theorems_ from the _axioms_.
 6.  **sound**: An axiomatic system is sound if every theorem is valid
 7.  **complete**: An axiomatic system is complete if every valid wff is a theorem
 
-##### Principia Mathematica (PM)<a name="principia-mathematica-(pm)"></a>
+##### Principia Mathematica (PM)
 
 The text in which Bertrand Russell and Alfred North Whitehead derived what is
 possibly the best-known axiomatic system for PC; also often used as the name
@@ -270,7 +272,7 @@ Axiomatic basis:
     2.  If $$\alpha$$ and ($$\alpha \supset \beta$$) are theorems, then $$\beta$$ is
         a theorem (rule of detachment, aka modus ponens)
 
-### The Predicate Calculus<a name="the-predicate-calculus"></a>
+### The Predicate Calculus
 
 A _predicate_ is an expression that represents some property an individual can
 possess. Propositions can be built up from propositions, predicates, or some
@@ -313,7 +315,7 @@ Terminology:
     2-ary (_dyadic_). This same notion is also denoted by _degree n_ and can
     also be denoted using a superscript: $$\phi^2{xyz}$$ (which is not a wff).
 
-#### Quantifiers<a name="quantifiers"></a>
+#### Quantifiers
 
 Additional atomic formulas can be created by combining existing atomic formulas
 using _quantifiers_. Quantifiers can be used to express facts like "Everybody
@@ -326,7 +328,7 @@ loves somebody" and "Somebody loves everybody."
     * $$(\forall{x})(\phi{x} \longrightarrow \psi{x})$$ = "Whatever is $$\phi$$ is $$\psi$$."
     * assert that a predicate applies to all individuals (of some collection/type)
 
-#### Truth-Functional Operators<a name="truth-functional-operators"></a>
+#### Truth-Functional Operators
 
 Atomic formulas may be combined with _truth-functional operators_ to give
 formulas such as $$\phi{x} \lor \psi{y}$$. For example: "Either the customer (x)
@@ -338,7 +340,7 @@ Aliases:
 *   Sentential Connectives
 *   Propositional Connectives
 
-#### Conditions of Truth and Falsity<a name="conditions-of-truth-and-falsity"></a>
+#### Conditions of Truth and Falsity
 
 There are three mutually exclusive classes of atomic formulas (aka predicate sentences)
 that exist:
@@ -350,13 +352,13 @@ that exist:
 3.  **contingent**: true on some specifications and false on others
     *   "Something is F and is G"
 
-#### Orders of Predicate Calculus<a name="orders-of-predicate-calculus"></a>
+#### Orders of Predicate Calculus
 
 First-order predicate calculus (FOPC) is constrained so that only individual
 variables can occur in quantifiers. Second-order predicate calculus (SOPC)
 also allows predicate variables to occur in quantifiers.
 
-##### First-Order Predicate Calculus (FOPC)<a name="first-order-predicate-calculus-(fopc)"></a>
+##### First-Order Predicate Calculus (FOPC)
 
 Formation Rules:
 
@@ -367,7 +369,7 @@ Formation Rules:
 4.  If $$\alpha$$ is a wff and $$a$$ is an individual variable, then
     $$(\forall{a}\alpha$$ is a wff.
 
-#### Modal Logic<a name="modal-logic"></a>
+#### Modal Logic
 
 [Coming eventually...]
 
