@@ -31,7 +31,7 @@ and reasoning (KRR) in some detail.
         2.  [Formation Rules of PC](#formation-rules-of-pc)
         3.  [Valid Formulas and Deductive Rules of PC](#valid-formulas-and-deductive-rules-of-pc)
         4.  [Axiomatization of PC](#axiomatization-of-pc)
-            1.  [Principia Mathematica (PM)](#principia-mathematica-(pm))
+            1.  [Principia Mathematica (PM)](#principia-mathematica)
     3.  [The Predicate Calculus](#the-predicate-calculus)
         1.  [Quantifiers](#quantifiers)
         2.  [Truth-Functional Operators](#truth-functional-operators)
@@ -249,7 +249,7 @@ deriving further wffs, known as _theorems_ from the _axioms_.
 6.  **sound**: An axiomatic system is sound if every theorem is valid
 7.  **complete**: An axiomatic system is complete if every valid wff is a theorem
 
-##### Principia Mathematica (PM)
+**Principia Mathematica (PM)**<a id="principia-mathematica"></a>
 
 The text in which Bertrand Russell and Alfred North Whitehead derived what is
 possibly the best-known axiomatic system for PC; also often used as the name
