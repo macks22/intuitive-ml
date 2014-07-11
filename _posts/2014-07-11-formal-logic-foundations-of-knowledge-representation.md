@@ -249,7 +249,7 @@ deriving further wffs, known as _theorems_ from the _axioms_.
 6.  **sound**: An axiomatic system is sound if every theorem is valid
 7.  **complete**: An axiomatic system is complete if every valid wff is a theorem
 
-**Principia Mathematica (PM)**<a id="principia-mathematica-(pm)"></a>
+**Principia Mathematica (PM)**<a name="principia-mathematica-(pm)"></a>
 
 The text in which Bertrand Russell and Alfred North Whitehead derived what is
 possibly the best-known axiomatic system for PC; also often used as the name
