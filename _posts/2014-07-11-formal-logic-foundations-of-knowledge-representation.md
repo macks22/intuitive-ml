@@ -1,5 +1,5 @@
 ---
-title: Notes on Knowledge Representation and Reasoning (KRR)
+title: Formal Logic: Foundations of Knowledge Representation and Reasoning (KRR)
 author: Mack Sweeney
 layout: post
 ---
