@@ -1,5 +1,5 @@
 ---
-title: Foundations of Knowledge Representation and Reasoning (KRR)
+title: Foundations of Knowledge Representation and Reasoning
 author: Mack Sweeney
 layout: post
 ---
