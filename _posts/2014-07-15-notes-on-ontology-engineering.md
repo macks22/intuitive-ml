@@ -17,18 +17,18 @@ taxonomies to logical propositions based on predicate calculus.
 
 ### Table of Contents<a name="table-of-contents"></a>
 
-    1.  [Engineering Methodologies](#engineering-methodologies)
-    2.  [Representations](#representations)
-    3.  [Categorization of Things](#categorization-of-things)
-    4.  [Physical Composition](#physical-composition)
-    5.  [Objects: Things vs. Stuff](#objects-things-vs-stuff)
-    6.  [Measurements](#measurements)
-    7.  [Events](#events)
-        1.  [Processes](#processes)
-        2.  [Time Intervals](#time-intervals)
-        3.  [Fluents and Objects](#fluents-and-objects)
-    1.  [Mental Events and Mental Objects](#mental-events-and-mental-objects)
-    2.  [Reasoning Systems](#reasoning-systems)
+1.  [Engineering Methodologies](#engineering-methodologies)
+2.  [Representations](#representations)
+3.  [Categorization of Things](#categorization-of-things)
+4.  [Physical Composition](#physical-composition)
+5.  [Objects: Things vs. Stuff](#objects-things-vs-stuff)
+6.  [Measurements](#measurements)
+7.  [Events](#events)
+    1.  [Processes](#processes)
+    2.  [Time Intervals](#time-intervals)
+    3.  [Fluents and Objects](#fluents-and-objects)
+1.  [Mental Events and Mental Objects](#mental-events-and-mental-objects)
+2.  [Reasoning Systems](#reasoning-systems)
 
 ### Engineering Methodologies<a name="engineering-methodologies"></a>
 
