@@ -367,7 +367,7 @@ Formation Rules:
 2.  If $$\alpha$$ is a wff, so is $$~\alpha$$
 3.  If $$\alpha$$ and $$\beta$$ are wffs, so is $$(\alpha \lor \beta)$$
 4.  If $$\alpha$$ is a wff and $$a$$ is an individual variable, then
-    $$(\forall{a}\alpha$$ is a wff.
+    $$(\forall{a})\alpha{a}$$ is a wff.
 
 #### Modal Logic
 
