@@ -1,0 +1,16 @@
+div.contain-to-grid.sticky {
+    background: white;
+}
+
+.top-bar {
+    background: white;
+    color: #53bf6b;
+}
+
+.title-area>h2 {
+    color: #53bf6b;
+}
+
+.panel {
+    color: black;
+}
