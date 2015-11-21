@@ -1,3 +1,11 @@
+# Old Jekyll ignores
 _site
 .*~
 Gemfile.lock
+
+# Mkdocs ignores
+site/
+
+# Python stuff
+.pyc
+.pyo
